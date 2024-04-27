@@ -33,6 +33,10 @@ const unexpectedErrorHandler = (error) => {
   exitHandler();
 };
 
+app.get('/',(req,res)=>{
+  res.send("Deployed backend")
+})
+
 process.on('uncaughtException', unexpectedErrorHandler);
 process.on('unhandledRejection', unexpectedErrorHandler);
 
